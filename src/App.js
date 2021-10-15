@@ -1,7 +1,9 @@
+import NavbarPopular from "./components/NavbarPopular";
+
 function App() {
   return (
-    <div className="bg-blue-500">
-      Test 
+    <div>       
+      <NavbarPopular />
     </div>
   );
 }
