@@ -1,37 +1,13 @@
 import React from 'react'
-import Slider from "react-slick";
 
-export default function Movies() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
-
+export default function Movies({list}) {
     return (
-        <div className='container mx-auto p-4'>
-       <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+        <div>
+            <img src={`https://image.tmdb.org/t/p/w200/${list && list.poster_path}`} alt=""
+            className='w-36 h-56  rounded' />
+            <h2 className='font-bold w-34'>{list && list.original_title}</h2>
+            <p className='text-gray-700 text-opacity-50'>{list && list.release_date}</p>
+
           </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-        </div>
     )
 }

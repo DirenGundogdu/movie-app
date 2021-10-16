@@ -1,11 +1,11 @@
 import NavbarPopular from "./components/NavbarPopular";
-import Movies from "./components/Movies";
+import Carousel from "./components/Carousel";
 
 function App() {
   return (
     <div>       
       <NavbarPopular />
-      <Movies />
+      <Carousel />
     </div>
   );
 }

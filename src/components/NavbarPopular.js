@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function NavbarPopular() {
     return (
-        <div className='container mx-auto p-4'>
+        <div className='container mx-auto p-1'>
             <div className='md:flex'>
 
                  <div className=' items-center'> {/* Navbar Title  */}
