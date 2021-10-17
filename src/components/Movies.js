@@ -24,6 +24,13 @@ export default function Movies({list}) {
         number: true,
         linearGradient: ["#1ed5a9 ","#1ed5a9"]
       };
+
+      const [toggled, setToggled] = React.useState(true);
+      const [toggledtwo, setToggledtwo] = React.useState(true);
+
+      const toggleImage = () => setToggled(!toggled);
+      const toggleImagetwo = () => setToggledtwo(!toggledtwo);
+   
     return (
         <div>
             <img src={`https://image.tmdb.org/t/p/w200/${list && list.poster_path}`} alt=""
@@ -32,10 +39,21 @@ export default function Movies({list}) {
             <CircularProgressBar {...props} ></CircularProgressBar>
             </div>
             <div className='mt-4'>
-            <h2 className='font-bold w-32'>{list && list.original_title}</h2>
+            <h2 className='font-bold w-32'>{list && list.title}</h2>
+            
             <p className='text-gray-700 text-opacity-50'>{list && list.release_date}</p>
             </div>
-
-          </div>
+            <div className='flex flex-row'>
+              <ul className='grid grid-cols-2 gap-3'>
+                <li>
+                    {toggledtwo && <button onClick={toggleImage}><img src="https://cdn-icons.flaticon.com/png/128/4480/premium/4480427.png?token=exp=1634478935~hmac=0eada7212a5699b3bfc9b9235d6b7497" alt="" className='w-6 h-6'/></button>}
+                </li>
+                <li>
+                   {toggled && <button onClick={toggleImagetwo}><img src="https://cdn-icons.flaticon.com/png/512/4480/premium/4480426.png?token=exp=1634478900~hmac=574cce47a099378abfdb27df93b0cf89" alt="Cat" className='w-6 h-6 mt-1' /></button>  }
+                </li>
+              </ul>
+            </div>
+            </div>
+     
     )
 }

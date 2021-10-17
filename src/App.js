@@ -7,7 +7,8 @@ function App() {
     <div>       
       <NavbarPopular />
       <Carousel />
-      <NavbarFreeWatch />
+      <NavbarFreeWatch />      
+      <Carousel />
     </div>
   );
 }
