@@ -1645,6 +1645,13 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+"@tomik23/react-circular-progress-bar@^0.1.24":
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/@tomik23/react-circular-progress-bar/-/react-circular-progress-bar-0.1.24.tgz#f934cec9cb2b468c5fd6ce188a4638afb68f47ed"
+  integrity sha512-1xwMG+xAsvHjmQjn0UhGMeQ4wK7u8+y46RLsNc1kZI0crd/ZGZTNkC3VIGhwHww1DUs+pOIElftNRM9rqAczKg==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@types/anymatch@*":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"

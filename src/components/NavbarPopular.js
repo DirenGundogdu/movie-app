@@ -5,9 +5,9 @@ export default function NavbarPopular() {
         <div className='container mx-auto p-1'>
             <div className='md:flex'>
 
-                 <div className=' items-center'> {/* Navbar Title  */}
+                 <div className='items-center'> {/* Navbar Title  */}
                     <div  className='flex flex-row justify-center'>
-                         <h1 className='m-2 md:mr-4 p-2 text-2xl font-bold '>Popüler olanlar</h1>
+                         <h1 className='m-2 md:mr-4 p-2 text-2xl font-bold'>Popüler olanlar</h1>
                     </div>
                 </div>
 
