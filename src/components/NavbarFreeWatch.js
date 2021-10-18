@@ -1,7 +1,16 @@
 import React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  import FreeMovie from "./CarouselAll/FreeMovie"
+  import FreeTv from "./CarouselAll/FreeTV"
 
 export default function NavbarFreeWatch() {
     return (
+        <Router>
         <div className='container mx-auto p-1'>
             <div className='md:flex'>
 
@@ -14,12 +23,12 @@ export default function NavbarFreeWatch() {
                 <nav className='flex flex-row justify-center p-4'>  {/* Navbar Content  */}
                     <ul  className='grid grid-cols-2 md:grid-cols-2 text-center border border-navbar-color rounded-full font-bold items-center p-3 md:py-1 md:px-0 text-navbar-color'>
                         <li>
-                            <a className='focus:bg-navbar-color focus:rounded-full p-2 focus:px-4 focus:py-2 focus:text-gradient-two' href="/#">
-                            Filmler</a>
+                            <Link activeClassName="active" to="/" className='focus:bg-navbar-color focus:rounded-full p-2 focus:px-4 focus:py-2 focus:text-gradient-two'>
+                            Filmler</Link>
                         </li>
                         <li>
-                            <a className='focus:bg-navbar-color focus:rounded-full pl-4 focus:py-2 focus:px-6 focus:text-gradient-two' href="/#">
-                            TV</a>
+                            <Link to="/freetv" activeClassName="active" className='focus:bg-navbar-color focus:rounded-full pl-4 focus:py-2 focus:px-6 focus:text-gradient-two'>
+                            TV</Link>
                         </li>
                         
                     </ul>
@@ -27,6 +36,15 @@ export default function NavbarFreeWatch() {
            
             </div>
         </div>
+        <Switch>
+        <Route path="/freetv">
+          <FreeTv />
+        </Route>       
+        <Route path="/">
+          <FreeMovie />
+        </Route>
+      </Switch>
+        </Router>
     )
 }
 
