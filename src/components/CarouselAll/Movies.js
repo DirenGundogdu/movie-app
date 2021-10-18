@@ -1,5 +1,7 @@
 import React from 'react'
 import { CircularProgressBar } from "@tomik23/react-circular-progress-bar"; 
+import thumbup from "../image/thumbs-up.png"
+import thumbpdown from "../image/thumb-down.png"
 
 export default function Movies({list}) {
   let perc = () => {
@@ -46,10 +48,10 @@ export default function Movies({list}) {
             <div className='flex flex-row'>
               <ul className='grid grid-cols-2 gap-3'>
                 <li> {/* thumbs up */}
-                    {toggledtwo && <button onClick={toggleImage}><img src="https://cdn-icons.flaticon.com/png/128/4480/premium/4480427.png?token=exp=1634478935~hmac=0eada7212a5699b3bfc9b9235d6b7497" alt="" className='w-6 h-6'/></button>}
+                    {toggledtwo && <button onClick={toggleImage}><img src={thumbup} alt="thumbs-up" className='w-6 h-6'/></button>}
                 </li>
                 <li>{/* thumbs down */}
-                   {toggled && <button onClick={toggleImagetwo}><img src="https://cdn-icons.flaticon.com/png/512/4480/premium/4480426.png?token=exp=1634478900~hmac=574cce47a099378abfdb27df93b0cf89" alt="Cat" className='w-6 h-6 mt-1' /></button>  }
+                   {toggled && <button onClick={toggleImagetwo}><img src={thumbpdown} alt="thumbs-down" className='w-6 h-6 mt-1' /></button>  }
                 </li>
               </ul>
             </div>

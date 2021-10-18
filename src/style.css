@@ -871,23 +871,8 @@ video {
   padding: 0.25rem;
 }
 
-.active\:px-4:active {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.active\:py-2:active {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .active\:text-transparent:active {
   color: transparent;
-}
-
-.active\:text-gradient-two:active {
-  --tw-text-opacity: 1;
-  color: rgba(30, 213, 169, var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
